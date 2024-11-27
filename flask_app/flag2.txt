@@ -1,0 +1,1 @@
+flag2: HKSP{sinni_mundo_ci_fosse_un_po_di_bene}

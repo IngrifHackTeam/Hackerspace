@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Flags</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- I don't remember what is this, but it seems important: 123-456-789 -->
+</head>
+<body>
+    <header>
+        <div class="logo">HACKER
+            <span>SPACE</span>
+        </div>
+
+        <div class="logo-container">
+            <img src="../static/logo_unipg.svg" alt="UniPG Logo">
+        </div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#events">Events</a>
+            <a href="#submit">Submit Flags</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Welcome to <span>Hackerspace</span></h1>
+        <p>Your hub for learning, hacking, and cybersecurity exploration.</p>
+        <a href="#submit" class="btn">Submit Your Flags</a>
+    </section>
+    <section id="submit">
+        <h2>Submit Your Flags</h2>
+        <form action="/submit_flag1" method="post">
+            <div class="input-group">
+                <label for="flag1">Flag 1</label>
+                <input type="text" id="flag1" name="flag1" placeholder="Enter your first flag" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <form action="/submit_flag2" method="post">
+            <div class="input-group">
+                <label for="flag2">Flag 2</label>
+                <input type="text" id="flag2" name="flag2" placeholder="Enter your second flag" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hackerspace. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

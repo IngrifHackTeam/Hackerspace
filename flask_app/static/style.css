@@ -1,0 +1,181 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e1117;
+    color: #ffffff;
+    line-height: 1.6;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: #08fdd8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #161b22;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #08fdd8;
+}
+
+header .logo span {
+    color: #ffffff;
+}
+
+header nav a {
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #f72585;
+}
+
+/* Hero section */
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #08fdd8, #161b22);
+    color: #ffffff;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#hero h1 span {
+    color: #f72585;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#hero .btn {
+    padding: 10px 20px;
+    background: #08fdd8;
+    color: #161b22;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#hero .btn:hover {
+    background: #f72585;
+    transform: scale(1.1);
+}
+
+/* Form section */
+#submit {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#submit h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #08fdd8;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #161b22;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #08fdd8;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #08fdd8;
+    border-radius: 5px;
+    background: #0e1117;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #f72585;
+    box-shadow: 0 0 5px #f72585;
+}
+
+form .btn {
+    width: 100%;
+    padding: 10px 20px;
+    background: #08fdd8;
+    color: #161b22;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+form .btn:hover {
+    background: #f72585;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #161b22;
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Stile per il contenitore del logo */
+.logo-container {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    margin-left: 20px;
+}
+
+/* Immagine SVG */
+.logo-container img {
+    height: 100%;
+    width: auto;
+}
