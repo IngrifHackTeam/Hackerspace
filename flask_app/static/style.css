@@ -89,6 +89,29 @@ header nav a:hover {
     transform: scale(1.1);
 }
 
+/* About section */
+#about {
+    padding: 80px 20px;
+    text-align: center;
+    background: #161b22; /* Colore di sfondo più scuro */
+    color: #ffffff;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #08fdd8;
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Form section */
 #submit {
     padding: 80px 20px;
@@ -182,4 +205,35 @@ footer p {
 .logo-container img {
     height: 70px; /* Increased height for the logo */
     width: auto; /* Maintain proportions */
+}
+
+/* Orari dei corsi */
+#orari {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0e1117;
+    color: #ffffff;
+}
+
+#orari h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #08fdd8;
+}
+
+#orari ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+#orari ul li {
+    font-size: 1.2rem;
+    background: #161b22;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
 }
