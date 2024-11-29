@@ -18,7 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 10px 20px 10px 50px;
     background: #161b22;
     position: sticky;
     top: 0;
@@ -35,9 +35,17 @@ header .logo span {
     color: #ffffff;
 }
 
+header nav{
+    display: flex;
+    align-items: center; /* Allinea tutto verticalmente al centro */
+    justify-content: flex-end; /* Posiziona tutto a destra */
+    gap: 20px; /* Distanza tra i link e il logo */
+}
+
 header nav a {
     margin: 0 15px;
     font-size: 1.1rem;
+    font-weight: bold;
     transition: color 0.3s;
 }
 
@@ -50,7 +58,7 @@ header nav a:hover {
     text-align: center;
     padding: 100px 20px;
     background: linear-gradient(135deg, #08fdd8, #161b22);
-    color: #ffffff;
+    color: white;
 }
 
 #hero h1 {
@@ -83,7 +91,7 @@ header nav a:hover {
 
 /* Form section */
 #submit {
-    padding: 50px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
@@ -161,21 +169,17 @@ footer p {
     margin: 0;
 }
 
-/* Stile per il contenitore del logo */
+/* Stile per il contenitore del logo unipg*/
 .logo-container {
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px; /* Spazio interno per creare margini attorno al logo */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    width: 60px;
-    margin-left: 20px;
+    align-items: center; /* Centra verticalmente il contenuto nel div */
 }
 
-/* Immagine SVG */
+/* logo unipg SVG*/
 .logo-container img {
-    height: 100%;
-    width: auto;
+    height: 70px; /* Increased height for the logo */
+    width: auto; /* Maintain proportions */
 }
