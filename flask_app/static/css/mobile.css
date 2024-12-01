@@ -1,0 +1,115 @@
+header {
+    display: flex;
+    justify-content: space-between; /* Questo aiuta a posizionare il logo a sinistra e la navbar a destra */
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+
+/* Nascondi la navbar inizialmente con max-height */
+header nav {
+    position: absolute;
+    top: 100%; /* La navbar parte subito sotto l'header */
+    left: 0;
+    width: 100%;
+    background: #161b22;
+    overflow: hidden; /* Nascondi i contenuti extra */
+    max-height: 0; /* Nasconde la navbar */
+    transition: max-height 0.4s ease-out; /* Animazione per apertura e chiusura */
+    display: flex;
+    flex-direction: column; /* Disporre gli elementi verticalmente */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    border-radius: 0 0 15px 15px; /* Angoli stondati in basso */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra sotto la navbar */
+}
+
+/* Quando la navbar è visibile */
+header nav.show {
+    max-height: 500px; /* Imposta un'altezza massima sufficiente per la navbar */
+}
+
+/* Menu toggle visibile solo su mobile */
+.menu-toggle {
+    display: block;
+}
+
+/* Quando la navbar è visibile, fai ruotare il simbolo dell'hamburger */
+.menu-toggle.open {
+    transform: rotate(90deg); /* Ruota l'icona di 90 gradi verso destra */
+    transition: transform 0.3s ease; /* Transizione fluida */
+}
+
+.menu-toggle.close {
+    transform: rotate(0deg); /* Ruota l'icona di 0 gradi per chiudere */
+    transition: transform 0.3s ease; /* Transizione fluida */
+}
+
+/* Stile per i link della navbar */
+header nav a {
+    padding: 10px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    border-bottom: none;
+    background: #161b22;
+}
+
+
+.logo-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    display: block; /* Imposta il contenitore come un blocco */
+    margin-left: 0; /* Allinea a sinistra */
+    text-align: left; /* Assicura che il contenuto sia allineato a sinistra */
+}
+
+.logo-container img {
+    height: 50px; /* Riduci la dimensione del logo */
+    width: auto; /* Mantieni le proporzioni */
+    margin-left: 0; /* Rimuovi eventuali margini a sinistra */
+}
+
+.input-group {
+    flex-direction: column; /* Cambia la direzione da riga a colonna */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    width: 100%; /* Assicura che l'input e le etichette occupino tutta la larghezza */
+}
+
+/* Centra le etichette */
+.input-group label {
+    margin-bottom: 5px; /* Spazio tra etichetta e input */
+    text-align: center; /* Centra il testo dell'etichetta */
+    width: 100%; /* Assicura che l'etichetta occupi tutta la larghezza */
+}
+
+/* Centra gli input */
+.input-group input {
+    width: 100%; /* Input che occupa tutta la larghezza */
+    text-align: center; /* Centra il testo all'interno dell'input */
+    margin-bottom: 10px; /* Distanza tra l'input e il bottone */
+}
+
+/* Centra il bottone submit */
+.input-group .btn {
+    width: 100%; /* Rende il bottone largo quanto l'input */
+    max-width: 300px; /* Imposta una larghezza massima per il bottone */
+    margin-top: 10px; /* Distanza tra l'input e il bottone */
+    display: block; /* Assicura che il bottone occupi una nuova riga */
+    margin-left: auto; /* Centra il bottone */
+    margin-right: auto;
+}
+
+
+#orari ul {
+    max-width: 100%; /* Rimuoviamo la larghezza fissa di 400px */
+    padding: 0 20px; /* Aggiungiamo padding ai lati */
+    text-align: center; /* Centrato il contenuto */
+    display: block; /* Ripristiniamo il comportamento di block */
+}
+
+#orari ul li {
+    width: auto; /* Lascia che gli item si adattino al loro contenuto */
+    text-align: center; /* Allinea il testo al centro */
+    margin: 10px 0; /* Spaziatura tra gli orari */
+}

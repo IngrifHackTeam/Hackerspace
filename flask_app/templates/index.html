@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Hacker Space UniPG</title>
-    <link rel="stylesheet" href="../static/style.css">
+
+    <!-- Stili base per desktop -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- Stili per mobile -->
+    <link rel="stylesheet" href="../static/css/mobile.css" media="screen and (max-width: 768px)">
+
+    
     <!-- I don't remember what is this, but it seems important: 123-456-789 -->
+    <!--sembra che cambi ogni volta il pin-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header>
-        <div class="logo">HACKER
-            <span>SPACE</span>
-        </div>
+        <a href="#hero"><div class="logo">HACKER<span>SPACE</span></div></a>
 
-        <nav>
+        <!-- Hamburger Menu per mobile -->
+        <button class="menu-toggle" aria-label="Apri menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="navbar" class="navbar">
             <a href="#about">About</a>
             <a href="#submit">Submit Flags</a>
             <a href="#orari">Orari Corsi</a>
             <div class="logo-container">
-                <img src="../static/logo_unipg.svg" alt="UniPG Logo">
+                <img src="../static/logo_unipg.svg">
             </div>
         </nav>
     </header>
@@ -27,12 +41,19 @@
         <h1>Welcome to <span>Hackerspace</span></h1>
         <p>Mettere una descrizione</p>
         <a href="#submit" class="btn">Submit Your Flags</a>
+
+
+
+        <div class="lava-bubble"></div>
+        <div class="lava-bubble"></div>
+        <div class="lava-bubble"></div>
+        <div class="lava-bubble"></div>
     </section>
 
     <section id="about">
         <h2>About</h2>
         <p>
-            Il corso di <strong>Cybersecurity</strong> è organizzato dagli studenti per gli studenti.  
+            Questo corso di <strong>Cybersecurity</strong> è organizzato dagli studenti per gli studenti.  
             L'obiettivo è esplorare concetti di sicurezza informatica, hacking etico e difesa delle reti.  
             Tutti i livelli di esperienza sono benvenuti, dai principianti ai più esperti.
         </p>
@@ -43,20 +64,30 @@
 
     <section id="submit">
         <h2>Submit Your Flags</h2>
-        <form action="/submit_flag1" method="post">
+        <p>Sono presenti delle flag nascoste nel sito <br> Inseriscile nei campi appositi e scopri cosa accade</p>
+        <form id="flag1-form" action="/submit_flag1" method="post">
             <div class="input-group">
-                <label for="flag1">Flag 1</label>
+                <label for="flag1"><b>Flag 1</b></label>
                 <input type="text" id="flag1" name="flag1" placeholder="Enter your first flag" required>
+                <button type="submit" class="btn">Submit</button>
+                <button id="play-sound-button1" class="btn sound-button" style="display: none;">
+                    <i class="fas fa-volume-up"></i>
+                </button>                
             </div>
-            <button type="submit" class="btn">Submit</button>
+            
         </form>
-        <form action="/submit_flag2" method="post">
+        <form id="flag2-form" action="/submit_flag2" method="post">
             <div class="input-group">
-                <label for="flag2">Flag 2</label>
+                <label for="flag2"><b>Flag 2</b></label>
                 <input type="text" id="flag2" name="flag2" placeholder="Enter your second flag" required>
+                <button type="submit" class="btn">Submit</button>
+                <button id="play-sound-button2" class="btn sound-button" style="display: none;">
+                    <i class="fas fa-volume-up"></i>
+                </button>                
             </div>
-            <button type="submit" class="btn">Submit</button>
         </form>
+
+        <div id="message-banner" class="hidden"></div>
     </section>
 
     <section id="orari">
@@ -67,8 +98,18 @@
         </ul>
     </section>
 
+
+    <!-- Bottone per tornare in cima -->
+    <button id="scroll-to-top-btn" class="scroll-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
     <footer>
         <p>&copy; 2024 Hackerspace. All Rights Reserved.</p>
     </footer>
+
+    <script src="../static/script/script.js"></script>
+
 </body>
 </html>

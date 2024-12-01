@@ -1,0 +1,356 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e1117;
+    color: #ffffff;
+    line-height: 1.6;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: #08fdd8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 50px;
+    background: #161b22;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #08fdd8;
+}
+
+header .logo span {
+    color: #ffffff;
+}
+
+header nav{
+    display: flex;
+    align-items: center; /* Allinea tutto verticalmente al centro */
+    justify-content: flex-end; /* Posiziona tutto a destra */
+    gap: 20px; /* Distanza tra i link e il logo */
+}
+
+header nav a {
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #f72585;
+}
+
+
+/* Pulsante menu per dispositivi mobile*/
+.menu-toggle {
+    display: none; /* Non visibile di default */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #08fdd8;
+    cursor: pointer;
+    z-index: 1100; /* Assicurati che sia sopra il contenuto */
+}
+
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #08fdd8, #161b22);
+    color: white;
+    position: relative; /* Aggiunto per permettere il posizionamento assoluto delle bolle */
+    overflow: hidden; /* Nasconde gli oggetti che escono dalla sezione */
+    height: 500px; /* Altezza definita per Hero */
+}
+
+/* Effetto di glow sul titolo */
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#hero h1 span {
+    color: #08fdd8; /* Colore brillante principale */
+    text-shadow: 
+        0px 0px 8px rgba(8, 253, 216, 0.8), 
+        0px 0px 20px rgba(8, 253, 216, 0.6),
+        0px 0px 40px rgba(8, 253, 216, 0.4);
+    animation: pulsate 3s infinite; /* Bagliore lento */
+}
+
+@keyframes pulsate {
+    0%, 100% {
+        text-shadow: 
+            0px 0px 8px rgba(8, 253, 216, 0.8),
+            0px 0px 20px rgba(8, 253, 216, 0.6),
+            0px 0px 40px rgba(8, 253, 216, 0.4);
+    }
+    50% {
+        text-shadow: 
+            0px 0px 12px rgba(8, 253, 216, 1),
+            0px 0px 30px rgba(8, 253, 216, 0.8),
+            0px 0px 50px rgba(8, 253, 216, 0.6);
+    }
+}
+
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#hero .btn {
+    padding: 10px 20px;
+    background: #08fdd8;
+    color: #161b22;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#hero .btn:hover {
+    background: #f72585;
+    transform: scale(1.1);
+}
+
+/* About section */
+#about {
+    padding: 100px 20px;
+    text-align: center;
+    background: #161b22; /* Colore di sfondo più scuro */
+    color: #ffffff;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #08fdd8;
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Stile per il contenitore del logo unipg*/
+.logo-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px; /* Spazio interno per creare margini attorno al logo */
+    display: flex;
+    align-items: center; /* Centra verticalmente il contenuto nel div */
+}
+
+/* logo unipg SVG*/
+.logo-container img {
+    height: 70px; /* Increased height for the logo */
+    width: auto; /* Maintain proportions */
+}
+
+
+/* Stile per la sezione submit */
+#submit {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#submit h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #08fdd8;
+}
+
+#submit p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+/* Stile per le form */
+form {
+    max-width: 500px;
+    margin: 10px auto; /* Margine tra le form */
+    display: flex;
+    flex-direction: column; /* Stack gli elementi */
+    align-items: center;
+    background: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Raggruppa input e bottone in una riga */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Spazio tra la label e la text box */
+}
+
+/* Stile per l'etichetta sopra l'input */
+.input-group label {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #08fdd8;
+}
+
+/* Stile campo input */
+.input-group input {
+    flex: 1; /* L'input occupa tutto lo spazio disponibile */
+    padding: 10px;
+    border: 1px solid #08fdd8;
+    border-radius: 5px;
+    background: #0e1117;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Bottoni per l'input */
+form .btn {
+    flex-shrink: 0; /* Evita che il bottone si restringa */
+    padding: 10px 20px;
+    background: #08fdd8;
+    color: #161b22;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+form .btn:hover {
+    background: #f72585;
+    transform: scale(1.05);
+}
+
+
+/* Banner di risposta per le flag (stile aggiornato) */
+#message-banner {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #08fdd8, #161b22); /* Sfumatura coerente con lo stile del sito */
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    opacity: 0;                /* Inizialmente invisibile */
+    visibility: hidden;        /* Inizialmente invisibile */
+    transition: opacity 0.5s ease, visibility 0s 0.5s; /* Transizione per opacità e visibilità */
+}
+
+#message-banner.success {
+    background: linear-gradient(135deg, #08fdd8, #34eb89); /* Colore verde brillante per il successo */
+}
+
+#message-banner.error {
+    background: linear-gradient(135deg, #f72585, #161b22); /* Colore rosso coerente con il sito per gli errori */
+}
+
+/* Classe 'show' per visualizzare il banner */
+#message-banner.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s 0s; /* Senza ritardo per la visibilità */
+}
+
+
+/* Orari dei corsi */
+#orari {
+    padding: 100px 20px;
+    text-align: center;
+    background: #0e1117;
+    color: #ffffff;
+}
+
+#orari h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #08fdd8;
+}
+
+#orari ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+#orari ul li {
+    font-size: 1.2rem;
+    background: #161b22;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+
+/* Bottone per tornare in cima alla pagina */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #08fdd8; /* Colore iniziale */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0; /* Inizialmente invisibile */
+    transform: translateY(20px); /* Parte leggermente sotto */
+    transition: all 0.3s ease; /* Stessa transizione degli altri bottoni */
+    z-index: 1000;
+}
+
+.scroll-to-top-btn.show {
+    opacity: 1; /* Rendi visibile */
+    transform: translateY(0); /* Torna alla posizione originale con un effetto di scivolamento */
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #f72585; /* Cambia colore al passaggio */
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #161b22;
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
