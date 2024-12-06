@@ -22,6 +22,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    user-select: none;
 }
 
 header .logo {
@@ -74,6 +75,7 @@ header nav a:hover {
     position: relative; /* Aggiunto per permettere il posizionamento assoluto delle bolle */
     overflow: hidden; /* Nasconde gli oggetti che escono dalla sezione */
     height: 500px; /* Altezza definita per Hero */
+    user-select: none;
 }
 
 /* Effetto di glow sul titolo */
@@ -106,24 +108,103 @@ header nav a:hover {
     }
 }
 
-
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+.hero-introduzione {
+    font-size: 1.3rem;
+    padding-top: 10px;
+    color: white;
 }
 
-#hero .btn {
-    padding: 10px 20px;
-    background: #08fdd8;
-    color: #161b22;
+/* Contenitore generale di Learn More */
+.learn-more-container {
+    display: inline-block; /* Mantiene la scritta inline ma come un contenitore */
+    position: relative; /* Necessario per attivare hover su tutto il contenitore */
+    padding: 10px 100px 10px 100px; /* Padding per estendere l'area sensibile */
+
+    
+}
+
+/* Scritta "Learn More" */
+.learn-more-to-about {
+    font-size: 1.5rem;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
+    color: #08fdd8;
+    text-shadow: none; /* Nessuna ombra di default */
+    transition: opacity 0.3s ease-in-out; /* Transizione per l'opacità */
+    opacity: 0.7; /* Partenza con opacità ridotta */
 }
 
-#hero .btn:hover {
-    background: #f72585;
-    transform: scale(1.1);
+/* Effetto hover e focus sul contenitore */
+.learn-more-container:hover .learn-more-to-about,
+.learn-more-container:focus-within .learn-more-to-about {
+    text-shadow: 
+        0px 0px 8px rgba(8, 253, 216, 0.8),
+        0px 0px 20px rgba(8, 253, 216, 0.6),
+        0px 0px 40px rgba(8, 253, 216, 0.4);
+    animation: pulsate 1.5s infinite ease-in-out; /* Attiva l'animazione pulsante */
+    opacity: 1; /* Opacità piena al passaggio del mouse */
+}
+
+/* Animazione pulsate */
+@keyframes pulsate {
+    0%, 100% {
+        text-shadow: 
+            0px 0px 8px rgba(8, 253, 216, 0.8),
+            0px 0px 20px rgba(8, 253, 216, 0.6),
+            0px 0px 40px rgba(8, 253, 216, 0.4);
+    }
+    50% {
+        text-shadow: 
+            0px 0px 12px rgba(8, 253, 216, 1),
+            0px 0px 30px rgba(8, 253, 216, 0.8),
+            0px 0px 50px rgba(8, 253, 216, 0.6);
+    }
+}
+
+
+/* Contenitore delle frecce */
+.arrows-to-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* Singola freccia */
+.arrow-to-about {
+    width: 15px;
+    height: 15px;
+    border-right: 2px solid #08fdd8;
+    border-bottom: 2px solid #08fdd8;
+    transform: rotate(45deg);
+    animation: float-to-about 1.5s infinite ease-in-out;
+}
+
+/* Animazione per la freccia */
+.arrow-to-about:nth-child(1) {
+    animation-delay: 0s;
+}
+.arrow-to-about:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.arrow-to-about:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Effetto di fluttuazione */
+@keyframes float-to-about {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(10px) rotate(45deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
 }
 
 /* About section */
@@ -132,6 +213,11 @@ header nav a:hover {
     text-align: center;
     background: #161b22; /* Colore di sfondo più scuro */
     color: #ffffff;
+}
+
+#about ::selection {
+    background-color: #08fdd8;
+    color: #161b22;
 }
 
 #about h2 {
@@ -169,6 +255,11 @@ header nav a:hover {
 #submit {
     padding: 100px 20px;
     text-align: center;
+}
+
+#submit ::selection {
+    background-color: #08fdd8;
+    color: #0e1117;
 }
 
 #submit h2 {
@@ -284,8 +375,13 @@ form .btn:hover {
 #orari {
     padding: 100px 20px;
     text-align: center;
-    background: #0e1117;
+    background: #161b22;
     color: #ffffff;
+}
+
+#orari ::selection {
+    background-color: #08fdd8;
+    color: #161b22;
 }
 
 #orari h2 {
@@ -294,17 +390,27 @@ form .btn:hover {
     color: #08fdd8;
 }
 
+#orari p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
 #orari ul {
     list-style: none;
     padding: 0;
-    margin: 20px auto;
+    margin: 40px auto;
     max-width: 400px;
     text-align: left;
 }
 
 #orari ul li {
     font-size: 1.2rem;
-    background: #161b22;
+    background: #0e1117;
     margin: 10px 0;
     padding: 10px 20px;
     border-radius: 5px;
@@ -318,7 +424,7 @@ form .btn:hover {
     bottom: 30px;
     right: 30px;
     background-color: #08fdd8; /* Colore iniziale */
-    color: white;
+    color: 161b22;
     border: none;
     border-radius: 50%;
     padding: 10px 15px;
@@ -337,18 +443,22 @@ form .btn:hover {
 
 .scroll-to-top-btn:hover {
     background-color: #f72585; /* Cambia colore al passaggio */
+    color: white;
 }
-
 
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: #161b22;
     color: #555;
     font-size: 0.9rem;
     margin-top: auto;
+}
+
+footer ::selection {
+    background-color: #08fdd8;
+    color: #161b22;
 }
 
 footer p {
