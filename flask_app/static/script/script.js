@@ -114,6 +114,20 @@ document.addEventListener("DOMContentLoaded", () => {
             )
         );
     }
+
+    // Gestisci il form per la flag3
+    const form3 = document.getElementById("flag3-form");
+    if (form3) {
+        form3.addEventListener("submit", (event) =>
+            handleSubmit(
+                event,
+                "/submit_flag3",
+                "flag3",
+                "play-sound-button3",
+                "../static/sounds/e-uno-sballo-mi-piace.mp3"
+            )
+        );
+    }
 });
 
 

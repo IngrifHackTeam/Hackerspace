@@ -60,7 +60,7 @@ header nav a {
     border-radius: 15px;
     padding: 5px;
     display: block; /* Imposta il contenitore come un blocco */
-    margin-left: 0; /* Allinea a sinistra */
+    margin-bottom: 10px;
     text-align: left; /* Assicura che il contenuto sia allineato a sinistra */
 }
 

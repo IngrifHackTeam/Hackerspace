@@ -31,6 +31,9 @@
             <a href="#about">About</a>
             <a href="#submit">Submit Flags</a>
             <a href="#orari">Orari Corsi</a>
+            <a href="https://chat.whatsapp.com/GrSTEoep185AforQRIhgnx" target="_blank" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
             <div class="logo-container">
                 <img src="../static/logo_unipg.svg">
             </div>
@@ -60,11 +63,17 @@
         <p>
             Unisciti a noi per imparare nuove competenze, collaborare con altri appassionati e scoprire il mondo della Cybersecurity!
         </p>
+        <br>
+        <p class="whatsapp-contact">
+            <a href="https://chat.whatsapp.com/GrSTEoep185AforQRIhgnx" target="_blank">
+                <i class="fab fa-whatsapp"></i> Unisciti al nostro gruppo WhatsApp
+            </a>
+        </p>
     </section>    
 
     <section id="submit">
         <h2>Submit Your Flags</h2>
-        <p>Sono presenti delle flag nascoste nel sito <br> Inseriscile nei campi appositi e scopri cosa accade</p>
+        <p>Sono presenti delle flag nascoste nel sito. <br> Inseriscile nei campi sottostanti e scopri cosa accade:</p>
         <form id="flag1-form" action="/submit_flag1" method="post">
             <div class="input-group">
                 <label for="flag1"><b>Flag 1</b></label>
@@ -74,8 +83,8 @@
                     <i class="fas fa-volume-up"></i>
                 </button>                
             </div>
-            
         </form>
+
         <form id="flag2-form" action="/submit_flag2" method="post">
             <div class="input-group">
                 <label for="flag2"><b>Flag 2</b></label>
@@ -87,12 +96,22 @@
             </div>
         </form>
 
+        <form id="flag3-form" action="/submit_flag3" method="post">
+            <div class="input-group">
+                <label for="flag3"><b>Flag 3</b></label>
+                <input type="text" id="flag3" name="flag3" placeholder="Enter your third flag" required>
+                <button type="submit" class="btn">Submit</button>
+                <button id="play-sound-button3" class="btn sound-button" style="display: none;">
+                    <i class="fas fa-volume-up"></i>
+                </button>                
+            </div>
+        </form>
         <div id="message-banner" class="hidden"></div>
     </section>
 
     <section id="orari">
         <h2>Orari dei Corsi</h2>
-        <p>I corsi di Hackerspace si tengono una volta a settimana:</p>
+        <p>Il corso di Hackerspace si tiene una volta a settimana:</p>
         <ul>
             <li>Venerdì: 14:30 - 18:00</li>
         </ul>

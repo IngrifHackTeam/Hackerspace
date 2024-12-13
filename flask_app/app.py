@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 flag1 = "HKSP{Io_a_napoli_non_ci_sono_mai_stato_tantomeno_in_moto}"
 flag2 = "HKSP{sinni_mundo_ci_fosse_un_po_di_bene}"
+flag3 = "HKSP{e-uno-sballo-mi-piace}"
 
 @app.route('/')
 def home():
@@ -41,6 +42,22 @@ def submit2():
         
         # Controlla se il flag è corretto
         if flag == flag2:
+            return jsonify({"message": "Flag corretta!", "success": True})
+        else:
+            return jsonify({"message": "Flag sbagliata!", "success": False})
+    
+    except Exception as e:
+        return f"Errore: {e}", 500
+    
+
+@app.route('/submit_flag3', methods=['POST'])
+def submit3():
+    try:
+        # Ottieni i dati inviati dal form
+        flag = request.json.get('flag')
+        
+        # Controlla se il flag è corretto
+        if flag == flag3:
             return jsonify({"message": "Flag corretta!", "success": True})
         else:
             return jsonify({"message": "Flag sbagliata!", "success": False})
