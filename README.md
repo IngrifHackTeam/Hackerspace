@@ -1,10 +1,10 @@
 # Hackerspace UniPG
 
-Benvenuto nel repository del progetto **Hackerspace UniPG**, un sito web progettato per promuovere il corso di **Cybersecurity** organizzato dall'Università degli Studi di Perugia.
+Benvenuto nel repository del progetto **Hackerspace UniPG**, un sito web progettato per promuovere il corso di **Cybersecurity** organizzato dagli studenti dell'Università degli Studi di Perugia.
 
 ## Descrizione del progetto
 
-Il sito è un punto di riferimento per studenti e appassionati di sicurezza informatica, con sezioni dedicate a:
+Il sito presenta sezioni dedicate a:
 
 - Informazioni sul corso
 - Inserimento delle flag nascoste (CTF)
